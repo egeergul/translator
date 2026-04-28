@@ -28,6 +28,7 @@ class HomeController extends GetxController {
   final statusMessage = RxnString();
   final isLoadingLanguages = true.obs;
   final isTranslating = false.obs;
+  final selectedTabIndex = 0.obs;
 
   bool _initialRedirectHandled = false;
   int _translationRequestId = 0;
@@ -103,6 +104,10 @@ class HomeController extends GetxController {
     translateCurrentText();
   }
 
+  void onTabSelected(int index) {
+    selectedTabIndex.value = index;
+  }
+
   Future<void> translateCurrentText() async {
     final requestId = ++_translationRequestId;
     final text = sourceText.value;
@@ -167,6 +172,9 @@ class HomeController extends GetxController {
 
   Future<void> openModelManagement() async {
     await Get.toNamed<void>(AppRoutes.models);
+    if (!isClosed) {
+      await refreshLanguages();
+    }
   }
 
   Future<void> _redirectToInitialModelSetupIfNeeded() async {
@@ -181,6 +189,9 @@ class HomeController extends GetxController {
     if (!hasCompletedSetup && !isClosed) {
       await Future<void>.delayed(Duration.zero);
       await Get.toNamed<void>(AppRoutes.models);
+      if (!isClosed) {
+        await refreshLanguages();
+      }
     }
   }
 

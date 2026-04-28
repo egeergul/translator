@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../constants/app_routes.dart';
 import '../screens/home/home_controller.dart';
 import '../screens/home/home_screen.dart';
+import '../screens/home/speech_controller.dart';
 import '../screens/manage_language_models/manage_language_models_controller.dart';
 import '../screens/manage_language_models/manage_language_models_screen.dart';
 import '../screens/splash/splash_screen.dart';
@@ -58,6 +59,12 @@ final appPages = <GetPage<dynamic>>[
       Get.put<HomeController>(
         HomeController(
           modelRepository: Get.find<ModelRepository>(),
+          translationRepository: Get.find<TranslationRepository>(),
+        ),
+      );
+      Get.put<SpeechController>(
+        SpeechController(
+          homeController: Get.find<HomeController>(),
           translationRepository: Get.find<TranslationRepository>(),
         ),
       );

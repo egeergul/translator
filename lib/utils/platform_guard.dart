@@ -14,5 +14,5 @@ class PlatformGuard {
   }
 
   static const unsupportedMessage =
-      'Offline translation is available on Android and iOS devices only.';
+      'Offline translation and transcription are available on Android and iOS devices only.';
 }
