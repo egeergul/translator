@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../constants/app_constants.dart';
 import 'home_controller.dart';
+import 'realtime_speech.dart';
 import 'speech.dart';
 import 'text.dart';
 
@@ -11,7 +12,7 @@ class HomeScreen extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    const pages = [TextTranslationPage(), SpeechPage()];
+    const pages = [TextTranslationPage(), SpeechPage(), RealtimeSpeechPage()];
 
     return Obx(() {
       return Scaffold(
@@ -35,6 +36,7 @@ class HomeScreen extends GetView<HomeController> {
           destinations: const [
             NavigationDestination(icon: Icon(Icons.translate), label: 'Text'),
             NavigationDestination(icon: Icon(Icons.mic), label: 'Speech'),
+            NavigationDestination(icon: Icon(Icons.hearing), label: 'Realtime'),
           ],
         ),
       );

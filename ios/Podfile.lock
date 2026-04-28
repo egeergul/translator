@@ -66,6 +66,8 @@ PODS:
   - PromisesObjC (2.4.0)
   - record_ios (1.2.0):
     - Flutter
+  - sherpa_onnx_ios (1.13.0):
+    - Flutter
   - SSZipArchive (2.6.0)
   - whisper_flutter_new (0.0.1):
     - Flutter
@@ -76,6 +78,7 @@ DEPENDENCIES:
   - google_mlkit_translation (from `.symlinks/plugins/google_mlkit_translation/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - record_ios (from `.symlinks/plugins/record_ios/ios`)
+  - sherpa_onnx_ios (from `.symlinks/plugins/sherpa_onnx_ios/ios`)
   - whisper_flutter_new (from `.symlinks/plugins/whisper_flutter_new/ios`)
 
 SPEC REPOS:
@@ -105,6 +108,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
   record_ios:
     :path: ".symlinks/plugins/record_ios/ios"
+  sherpa_onnx_ios:
+    :path: ".symlinks/plugins/sherpa_onnx_ios/ios"
   whisper_flutter_new:
     :path: ".symlinks/plugins/whisper_flutter_new/ios"
 
@@ -126,6 +131,7 @@ SPEC CHECKSUMS:
   path_provider_foundation: bb55f6dbba17d0dccd6737fe6f7f34fbd0376880
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   record_ios: 412daca2350b228e698fffcd08f1f94ceb1e3844
+  sherpa_onnx_ios: dd99d1ea762b50700812684ce429a95709f3756e
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
   whisper_flutter_new: 9276535665f51f845831fe94859b2cccd0334a70
 

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../constants/app_routes.dart';
 import '../screens/home/home_controller.dart';
 import '../screens/home/home_screen.dart';
+import '../screens/home/realtime_speech_controller.dart';
 import '../screens/home/speech_controller.dart';
 import '../screens/manage_language_models/manage_language_models_controller.dart';
 import '../screens/manage_language_models/manage_language_models_screen.dart';
@@ -64,6 +65,12 @@ final appPages = <GetPage<dynamic>>[
       );
       Get.put<SpeechController>(
         SpeechController(
+          homeController: Get.find<HomeController>(),
+          translationRepository: Get.find<TranslationRepository>(),
+        ),
+      );
+      Get.put<RealtimeSpeechController>(
+        RealtimeSpeechController(
           homeController: Get.find<HomeController>(),
           translationRepository: Get.find<TranslationRepository>(),
         ),
